@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8080
 
 # 线程池配置
 thread:
@@ -16,7 +16,7 @@ thread:
 spring:
   datasource:
     username: root
-    password: 123456
+    password: root
     url: jdbc:mysql://127.0.0.1:3306/s-pay-mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
@@ -34,6 +34,12 @@ spring:
 #mybatis:
 #  mapper-locations: classpath:/mybatis/mapper/*.xml
 #  config-location:  classpath:/mybatis/config/mybatis-config.xml
+
+# 微信公众号对接
+weixin:
+  config:
+    originalid: gh_1117fd39463b
+    token: 7777
 
 # 日志
 logging:
