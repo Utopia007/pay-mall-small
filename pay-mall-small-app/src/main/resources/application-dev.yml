@@ -17,7 +17,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/s-pay-mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
+    url: jdbc:mysql://127.0.0.1:3306/s_pay_mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
     pool-name: Retail_HikariCP
@@ -31,9 +31,9 @@ spring:
   type: com.zaxxer.hikari.HikariDataSource
 
 # MyBatis 配置【如需使用记得打开】
-#mybatis:
-#  mapper-locations: classpath:/mybatis/mapper/*.xml
-#  config-location:  classpath:/mybatis/config/mybatis-config.xml
+mybatis:
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location:  classpath:/mybatis/config/mybatis-config.xml
 
 # 微信公众号对接
 weixin:
@@ -43,6 +43,15 @@ weixin:
     app-id: wx1ba085ee1f89fc6c
     app-secret: ead2d29be5da12d5a7df4acbeee7453a
     template_id: cXiWUfGF_Ga2nmazSq4mod1BXJuBqLEI9v-iXf6jJ7A
+
+# 支付宝支付 - 沙箱 https://opendocs.alipay.com/common/02kkv7
+alipay:
+  app_id: 支付宝沙箱用户ID
+  merchant_private_key: 支付宝密钥
+  alipay_public_key: 支付宝公钥
+  notify_url: http://2357d5e7.r9.cpolar.top/api/v1/alipay/pay_notify_url
+  return_url: https://www.baidu.com
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
 
 # 日志
 logging:
