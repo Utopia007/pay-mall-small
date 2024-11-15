@@ -38,8 +38,11 @@ spring:
 # 微信公众号对接
 weixin:
   config:
-    originalid: gh_1117fd39463b
-    token: 7777
+    originalid: gh_e067c267e056
+    token: b8b6
+    app-id: wx1ba085ee1f89fc6c
+    app-secret: ead2d29be5da12d5a7df4acbeee7453a
+    template_id: cXiWUfGF_Ga2nmazSq4mod1BXJuBqLEI9v-iXf6jJ7A
 
 # 日志
 logging:
